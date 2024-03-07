@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+:root {
+    --primary-color: #f2726a;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #035f2b, #41bb68);
+    gap: 60px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #000;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.card__img {
+    height: 120px;
+    width: 120px;
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .2s linear;
+}
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    cursor: pointer;
+}
+
+.card__name {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 120px;
+    transition: .3s;
+}
+.card__description {
+    color: var(--primary-color);
+    margin-top: -15px;
+    font-size: 18px;
+}
+.card__contact {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+.card__contact > a {
+        text-decoration: none;
+        color: white;
+        transition: color .2s linear;
+        font-size: 20px;
+}
+.card__contact > a:hover {
+    color: var(--primary-color);
+}
+button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 7px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition:  all .2s linear;
+    outline: none;
+}
+button:hover {
+    background-color: var(--primary-color);
+}
+
+.card__img:hover {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    border: unset;
+}
+.card__img:hover ~ .card__name {
+    margin-top: 500px;
+}
